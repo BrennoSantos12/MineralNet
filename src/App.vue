@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import logo from './assets/logo.jpeg'
+import FieldConsole from './components/FieldConsole.vue'
+import RateioCalculator from './components/RateioCalculator.vue'
 
 const year = new Date().getFullYear()
 
@@ -33,6 +35,8 @@ const services = [
 const nav = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#servicos" },
+  { label: "Modo Campo", href: "#modo-campo" },
+  { label: "Calculadora", href: "#simulador" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ]
@@ -116,6 +120,12 @@ const nav = [
         </div>
       </div>
     </section>
+
+    <!-- Modo Campo (Console interativo) -->
+    <FieldConsole />
+
+    <!-- Simulador de Rateio -->
+    <RateioCalculator />
 
     <!-- Sobre -->
     <section id="sobre" class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
